@@ -1,0 +1,18 @@
+php:
+  preset: laravel
+  version: 8
+  disabled:
+    - no_unused_imports
+  finder:
+    not-name:
+      - index.php
+      - server.php
+js:
+  finder:
+    not-name:
+      - webpack.mix.js
+css: true
+const mix = require('laravel-mix');
+
+mix.js('resources/js/app.js', 'public/js')
+   .vue();
